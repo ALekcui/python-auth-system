@@ -5,6 +5,11 @@
         "fio": "Name Lastname"
     },
     {
+        "login": "User2",
+        "password" : "password2",
+        "fio" : "Name Lastname2"
+    },
+    {
         "login": "Test User",
         "password": "12345",
         "fio": "Test"

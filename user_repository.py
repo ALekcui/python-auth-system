@@ -8,7 +8,8 @@ USERS = "users.json"
 def load_users():
     if not os.path.exists(USERS):
         return [
-            User("User1", "password", "Name"),
+            User("User1", "password", "Name Lastname"),
+            User("User2", "password2","Name Lastname2"),
             User("Test User", "12345", "Test")
         ]
     
