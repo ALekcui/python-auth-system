@@ -1,5 +1,7 @@
 # Python Authentication System
 
+Simple authentication system on python
+
 ## Tech Stack & Architecture
 
 - **Language:** Python 3
