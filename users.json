@@ -1,0 +1,12 @@
+[
+    {
+        "login": "User1",
+        "password": "password",
+        "fio": "Name Lastname"
+    },
+    {
+        "login": "Test User",
+        "password": "12345",
+        "fio": "Test"
+    }
+]
