@@ -11,3 +11,16 @@
 ├── user_repository.py  # Data access layer (saving/loading user data)
 ├── config.py           # Application configurations and constants
 ```
+
+## Installation & Running
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com
+   cd python-auth-system
+   ```
+
+2. **Run the application:**
+   ```bash
+   python view.py
+   ```
