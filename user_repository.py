@@ -5,22 +5,23 @@ import json
 
 USERS = "users.json"
 
-def load_users():
-    if not os.path.exists(USERS):
-        return [
+defaul_users =[
             User("User1", "password", "Name Lastname"),
             User("User2", "password2","Name Lastname2"),
             User("Test User", "12345", "Test")
         ]
-    
-    with open(USERS, "r", encoding="utf-8") as f:
-        try:
-            data = json.load(f)
-            return [User(u["login"], u["password"], u["fio"]) for u in data]
-        except json.JSONDecodeError:
-            return []
 
-def save_users(users_list):
+def load_users()->list[tuple]:
+    if not os.path.exists(USERS):
+        return defaul_users
+    
+    with open(USERS, "r", encoding="utf-8") as users:
+        try:
+            return [User(user["login"], user["password"], user["fio"]) for user in (json.load(users))]
+        except json.JSONDecodeError:
+            return defaul_users
+
+def save_users(users_list:list[str]) -> None:
     data = []
     for user in users_list:
         data.append({
@@ -39,10 +40,10 @@ if not os.path.exists(USERS):
 
 users_repos = {user.get_login(): user for user in users}
 
-def get_user_by_login(login):
+def get_user_by_login(login: str):
     return users_repos.get(login)
 
-def add_user(login, password, fio):
+def add_user(login:str, password:str, fio:str)->bool:
     if login in users_repos:
         return False 
     
