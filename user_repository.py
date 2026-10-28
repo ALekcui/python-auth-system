@@ -1,9 +1,7 @@
 from User import User
 import os
 import json
-
-
-USERS = "users.json"
+from config import *
 
 defaul_users =[
             User("User1", "password", "Name Lastname"),

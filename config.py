@@ -4,3 +4,7 @@ AUTH_HEIGHT = 130
 
 ERROR_WIDTH = 400
 ERROR_HEIGHT = 150
+
+USERS = "users.json"
+
+curent_user = ...
