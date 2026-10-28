@@ -16,7 +16,6 @@ Simple authentication system on python
 ├── User.py             # User data model
 ├── user_repository.py  # Data access layer (saving/loading user data)
 ├── config.py           # Application configurations and constants
-├── users.json          # Storage of users data
 ```
 
 ## Installation & Running
