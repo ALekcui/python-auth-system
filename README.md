@@ -10,11 +10,13 @@ Simple authentication system on python
 ## Project Structure
 
 ```text
-├── main.py             # Handles the visual interface (UI)
-├── controller.py       # Manages user requests and updates the view/model
+├── main.py             # Handles the visual interface of the authentication window
+├── err_window.py       # Handles the visual interface of the error window
+├── controller.py       # Manages user requests and updates the main/model
 ├── User.py             # User data model
 ├── user_repository.py  # Data access layer (saving/loading user data)
 ├── config.py           # Application configurations and constants
+├── users.json          # Storage of users data
 ```
 
 ## Installation & Running
@@ -29,5 +31,5 @@ Simple authentication system on python
 2. **Run the application:**
 
    ```bash
-   python view.py
+   python main.py
    ```
