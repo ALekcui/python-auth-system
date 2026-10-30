@@ -9,7 +9,7 @@ defaul_users =[
             User("Test User", "12345", "Test")
         ]
 
-def load_users()->list[tuple]:
+def load_users() -> list[tuple]:
     if not os.path.exists(USERS):
         return defaul_users
     
@@ -19,7 +19,7 @@ def load_users()->list[tuple]:
         except json.JSONDecodeError:
             return defaul_users
 
-def save_users(users_list:list[str]) -> None:
+def save_users(users_list: list[str] ) -> None:
     data = []
     for user in users_list:
         data.append({
@@ -41,7 +41,7 @@ users_repos = {user.get_login(): user for user in users}
 def get_user_by_login(login: str):
     return users_repos.get(login)
 
-def add_user(login:str, password:str, fio:str)->bool:
+def add_user(login:str, password: str, fio: str) -> bool:
     if login in users_repos:
         return False 
     

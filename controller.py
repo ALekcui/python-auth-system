@@ -4,8 +4,8 @@ from config import *
 
 def auth()->None:
     print(f"Привет - {current_user}")
-    
-def deny()->None:
+
+def deny() -> None:
     err_window.ShowError("Accses deny", "Неправильный логин или пароль. Пожалуйста проверьте написание логина и пароля и повторите попытку.", True)
 
 def auth_user(login:str,password:str)->None:
