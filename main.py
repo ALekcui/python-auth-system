@@ -5,7 +5,7 @@ import controller
 main_window = tk.Tk()
 main_window.title(AUTH_TITLE)
 main_window.geometry(f"{AUTH_WIDTH}x{AUTH_HEIGHT}")
-main_window.resizable=False
+main_window.resizable(False,False)
 
 tk.Label(main_window, text="Логин").pack()
 login_text = tk.Text(main_window,width=15, height=1, wrap=None)
