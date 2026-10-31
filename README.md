@@ -1,6 +1,6 @@
 # Python Authentication System
 
-Simple authentication system on python
+Simple authentication system on python modified by Grisha *HeavenOf22865*
 
 ## Tech Stack & Architecture
 
@@ -13,7 +13,7 @@ Simple authentication system on python
 ├── main.py             # Handles the visual interface of the main window
 ├── err_window.py       # Handles the visual interface of the error window
 ├── login_window.py     # Handles the visual interface of the login window
-├── register_window.py  # blyat register window ui
+├── register_window.py  # Handles the visual interface of the register window
 ├── controller.py       # Manages user requests and updates the main/model
 ├── User.py             # User data model
 ├── user_repository.py  # Data access layer (saving/loading user data)
