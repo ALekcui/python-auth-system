@@ -10,8 +10,10 @@ Simple authentication system on python
 ## Project Structure
 
 ```text
-├── main.py             # Handles the visual interface of the authentication window
+├── main.py             # Handles the visual interface of the main window
 ├── err_window.py       # Handles the visual interface of the error window
+├── login_window.py     # Handles the visual interface of the login window
+├── register_window.py  # blyat register window ui
 ├── controller.py       # Manages user requests and updates the main/model
 ├── User.py             # User data model
 ├── user_repository.py  # Data access layer (saving/loading user data)
@@ -23,7 +25,7 @@ Simple authentication system on python
 1. **Clone the repository:**
 
    ```bash
-   git clone git@github.com:ALekcui/python-auth-system.git
+   git clone --branch Grisha-dayn --single-branch https://github.com/ALekcui/python-auth-system.git
    cd python-auth-system
    ```
 
