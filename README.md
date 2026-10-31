@@ -23,7 +23,7 @@ Simple authentication system on python
 1. **Clone the repository:**
 
    ```bash
-   git clone git@github.com:ALekcui/python-auth-system.git
+   git clone https://github.com/ALekcui/python-auth-system.git
    cd python-auth-system
    ```
 
