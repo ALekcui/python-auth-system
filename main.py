@@ -1,22 +1,22 @@
 import tkinter as tk
 from config import *
 import controller 
+from login_window import *
+from register_window import *
 
-main_window = tk.Tk()
-main_window.title(AUTH_TITLE)
-main_window.geometry(f"{AUTH_WIDTH}x{AUTH_HEIGHT}")
-main_window.resizable(False,False)
+def main():
+    main_window = tk.Tk()
+    main_window.title(AUTH_TITLE)
+    main_window.geometry(f"{AUTH_WIDTH}x{AUTH_HEIGHT}")
+    main_window.resizable(False,False)
 
-tk.Label(main_window, text="Логин").pack()
-login_text = tk.Text(main_window,width=15, height=1, wrap=None)
-login_text.pack()
+    login_button = tk.Button(main_window, text="Логин", background='#c6c6c6', command=show_login_window)
+    login_button.pack(pady=5)
 
-tk.Label(main_window, text="Пароль").pack()
-password_text = tk.Text(main_window, width=15, height=1, wrap=None)
-password_text.pack()
+    register_button = tk.Button(main_window, text="Регистрация", background='#c6c6c6', command=show_register_window)
+    register_button.pack(pady=10)
 
-auth_button = tk.Button(main_window, text="Войти", background='#c6c6c6', command=lambda: controller.auth_user(login_text.get(1.0, tk.END), password_text.get(1.0, tk.END)))
-auth_button.pack(pady=5)
+    main_window.mainloop()
 
 if __name__ == "__main__":
-    main_window.mainloop()
+    main()

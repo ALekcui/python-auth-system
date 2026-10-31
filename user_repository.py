@@ -9,15 +9,21 @@ defaul_users =[
             User("Test User", "12345", "Test")
         ]
 
-def load_users() -> list[tuple]:
+users = defaul_users
+
+def load_users():
+    global users
+
     if not os.path.exists(USERS):
         return defaul_users
     
     with open(USERS, "r", encoding="utf-8") as users:
         try:
-            return [User(user["login"], user["password"], user["fio"]) for user in (json.load(users))]
+            users = [User(user["login"], user["password"], user["fio"]) for user in (json.load(users))]
         except json.JSONDecodeError:
-            return defaul_users
+            users = defaul_users
+            
+load_users()
 
 def save_users(users_list: list[str] ) -> None:
     data = []
@@ -30,8 +36,6 @@ def save_users(users_list: list[str] ) -> None:
     
     with open(USERS, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
-
-users = load_users()
 
 if not os.path.exists(USERS):
     save_users(users)
